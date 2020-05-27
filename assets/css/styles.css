@@ -1,0 +1,193 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+/* Css Variables */
+:root {
+  --primary-desaturated-red: hsl(0, 36%, 70%);
+  --primary-soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  color: hsl(0, 36%, 70%);
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*Base Container */
+main.container {
+  width: 100%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Grid Container */
+.coming-soon {
+  display: grid;
+  grid-template-columns: 1fr 600px;
+}
+
+/*Left Side Block */
+div.coming-soon__left-side {
+  background: url("../images/bg-pattern-desktop.svg") no-repeat;
+  background-size: cover;
+  padding: 10rem;
+}
+
+div.coming-soon__left-side h1 {
+  font-size: 6.2rem;
+  text-transform: uppercase;
+  line-height: 6.8rem;
+  letter-spacing: 2rem;
+  color: var(--dark-grayish-red);
+  margin-bottom: 4rem;
+}
+
+.logo {
+  margin-bottom: 8rem;
+}
+
+.rose-span {
+  color: var(--primary-desaturated-red);
+  font-weight: 100;
+}
+
+div.coming-soon__left-side p {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 4rem;
+  color: var(--primary-desaturated-red);
+  font-weight: 600;
+}
+
+form.coming-soon__form {
+  position: relative;
+}
+
+form.coming-soon__form input {
+  width: 100%;
+  border-radius: 50px;
+  border: 1px solid hsl(0, 36%, 85%);
+  padding: 12px 20px;
+}
+
+form.coming-soon__form input::placeholder {
+  color: var(--primary-desaturated-red);
+}
+
+button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: none;
+  height: 100%;
+  width: 22%;
+  border-radius: 50px;
+  outline: none;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 40px;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border-color: hsl(0, 74%, 74%);
+  box-shadow: 0px 10px 20px hsl(0, 36%, 85%);
+}
+
+button:hover {
+  cursor: pointer;
+  background: linear-gradient(135deg, hsl(0, 100%, 98%), hsl(0, 80%, 86%));
+}
+
+/* my media queries */
+@media screen and (max-width: 750px) {
+  html {
+    font-size: 50%;
+  }
+  .coming-soon {
+    grid-template-columns: 1fr;
+  }
+}
