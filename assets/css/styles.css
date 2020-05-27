@@ -190,6 +190,18 @@ button:hover {
   background: linear-gradient(135deg, hsl(0, 100%, 98%), hsl(0, 80%, 86%));
 }
 
+.input-icons i {
+  position: absolute;
+  display: none;
+  padding: 10px;
+  right: 90px;
+}
+
+.error-msg {
+  display: none;
+  padding: 8px 12px;
+}
+
 /* my media queries */
 @media screen and (max-width: 775px) {
   html {
