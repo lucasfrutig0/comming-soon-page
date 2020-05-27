@@ -51,6 +51,7 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
   color: hsl(0, 36%, 70%);
+  position: relative;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -96,13 +97,13 @@ select {
 /*Base Container */
 main.container {
   width: 100%;
-  max-width: 1440px;
-
-  margin: 0 auto;
   display: flex;
+  height: 100vh;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
 }
 
 /* Grid Container */
@@ -115,7 +116,7 @@ main.container {
 div.coming-soon__left-side {
   background: url("../images/bg-pattern-desktop.svg") no-repeat;
   background-size: cover;
-  padding: 10rem;
+  padding: 18rem;
 }
 
 div.coming-soon__left-side h1 {
@@ -124,11 +125,16 @@ div.coming-soon__left-side h1 {
   line-height: 6.8rem;
   letter-spacing: 2rem;
   color: var(--dark-grayish-red);
+  margin-bottom: 2rem;
+  margin-top: 9rem;
+}
+
+div.logo {
   margin-bottom: 4rem;
 }
 
-.logo {
-  margin-bottom: 8rem;
+div.logo-mobile {
+  display: none;
 }
 
 .rose-span {
@@ -146,6 +152,7 @@ div.coming-soon__left-side p {
 
 form.coming-soon__form {
   position: relative;
+  width: 100%;
 }
 
 form.coming-soon__form input {
@@ -153,6 +160,7 @@ form.coming-soon__form input {
   border-radius: 50px;
   border: 1px solid hsl(0, 36%, 85%);
   padding: 12px 20px;
+  color: var(--primary-desaturated-red);
 }
 
 form.coming-soon__form input::placeholder {
@@ -183,11 +191,36 @@ button:hover {
 }
 
 /* my media queries */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 775px) {
   html {
     font-size: 50%;
   }
   .coming-soon {
     grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+  div.coming-soon__left-side {
+    padding: 3rem;
+    order: 3;
+  }
+  div.coming-soon__right-side {
+    margin: 0 auto;
+    order: 2;
+    width: 100%;
+  }
+  div.coming-soon__right-side img {
+    width: 100%;
+  }
+  div.logo {
+    display: none;
+  }
+
+  div.logo-mobile {
+    display: block;
+    padding: 3rem;
+  }
+  div.coming-soon__left-side h1,
+  div.coming-soon__left-side p {
+    text-align: center;
   }
 }
