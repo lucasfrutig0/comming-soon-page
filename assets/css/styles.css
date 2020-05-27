@@ -98,7 +98,6 @@ select {
 main.container {
   width: 100%;
   display: flex;
-  height: 100vh;
   justify-content: center;
   align-items: center;
   max-width: 1440px;
@@ -229,7 +228,7 @@ button:hover {
 
   div.logo-mobile {
     display: block;
-    padding: 3rem;
+    padding: 5rem;
   }
   div.coming-soon__left-side h1,
   div.coming-soon__left-side p {
